@@ -1,12 +1,18 @@
+version: "3.8"
+
 services:
   catalogdb:
     container_name: catalogdb
+    image: postgres:18
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=tanviranan23..
-      - POSTGRES_DB=CatalogDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tanviranan23..
+      POSTGRES_DB: catalogdb
     restart: always
     ports:
-        - "5432:5432"
+      - "5432:5432"
     volumes:
-      - postgres_catalog:/var/lib/postgresql/data/     
+      - postgres_catalog:/var/lib/postgresql
+
+volumes:
+  postgres_catalog:

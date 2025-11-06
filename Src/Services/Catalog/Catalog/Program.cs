@@ -1,5 +1,3 @@
-
-
 using Carter;
 using Marten;
 
